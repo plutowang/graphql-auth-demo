@@ -8,6 +8,7 @@ import mutation from "../mutations/Logout";
 class Header extends React.Component {
   onLogout() {
     this.props.mutate({}).then(() => this.props.data.refetch());
+    // hashHistory.push("/");
   }
   renderButtons() {
     const { loading, user } = this.props.data;
